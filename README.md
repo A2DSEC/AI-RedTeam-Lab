@@ -17,6 +17,9 @@ flowchart LR
     Run --> Art["Upload results as artifact"]
 ```
 
+<img width="1095" height="887" alt="image" src="https://github.com/user-attachments/assets/ed808ae2-8b68-4748-acf0-92800b80a5cd" />
+
+
 1. **Trigger:** the workflow starts on any push that changes a file under `app/`, or manually from the Actions tab (`workflow_dispatch`).
 2. **Environment:** GitHub creates a clean Ubuntu runner. It installs Python 3.12, installs Ollama and pulls `llama3.2:1b`. No external LLM API is used; the model runs on the runner itself.
 3. **Test run:** `attack_runner.py` runs the attack set and the benign baseline against the chatbot with these settings:
